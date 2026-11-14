@@ -1,0 +1,6 @@
+{
+  "name": "SREHA AI AGENT",
+  "description": "Emotionally expressive Bengali-friendly Personal AI Agent with Gemini Live Voice, Multi-Provider AI Engine, Long-Term Memory, Automation Tools, and Native Android Kotlin Project Export.",
+  "requestFramePermissions": ["microphone", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

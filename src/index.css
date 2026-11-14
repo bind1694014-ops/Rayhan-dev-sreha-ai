@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: "Plus Jakarta Sans", "Noto Sans Bengali", system-ui, sans-serif;
+    --font-body: "DM Sans", "Noto Sans Bengali", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html,
+  body {
+    font-family: var(--font-body);
+    overscroll-behavior-y: contain;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom sleek scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.45);
+}
+
+/* Markdown prose inside chat bubbles */
+.sreha-prose p {
+  margin-bottom: 0.65rem;
+  line-height: 1.65;
+}
+.sreha-prose p:last-child {
+  margin-bottom: 0;
+}
+.sreha-prose ul,
+.sreha-prose ol {
+  margin: 0.5rem 0 0.75rem 1.25rem;
+}
+.sreha-prose ul {
+  list-style-type: disc;
+}
+.sreha-prose ol {
+  list-style-type: decimal;
+}
+.sreha-prose li {
+  margin-bottom: 0.25rem;
+  line-height: 1.6;
+}
+.sreha-prose h1,
+.sreha-prose h2,
+.sreha-prose h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+.sreha-prose h1 { font-size: 1.15rem; }
+.sreha-prose h2 { font-size: 1.05rem; }
+.sreha-prose h3 { font-size: 0.98rem; }
+.sreha-prose blockquote {
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.85rem;
+  background: rgba(148, 163, 184, 0.1);
+  margin: 0.6rem 0;
+  font-style: italic;
+}
+.sreha-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 0.85rem;
+}
+.sreha-prose th,
+.sreha-prose td {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 0.4rem 0.65rem;
+  text-align: left;
+}
